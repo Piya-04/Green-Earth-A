@@ -37,24 +37,35 @@
       <ul
         tabindex="0"
         class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52  shadow">
-        <li><a>About</a></li>
+        <li><a href="" class="">About</a></li>
         <li>
-          <a>Gallery</a>
+          <a href="" class="">Gallery</a>
         </li>
-        <li><a>Plant a Tree</a></li>
+        <li><a href="" class="">Plant a Tree</a></li>
       </ul>
     </div>
-    <a class="btn btn-ghost text-xl">
+    <a href="" class="btn btn-ghost text-xl">
         <i class="fa-solid fa-seedling text-black"></i>
         Green Earth
     </a>
   </div>
   <div class="navbar-center hidden lg:flex">
     <ul class="menu menu-horizontal px-1">
-      <li><a>About</a></li>
       <li>
-        <a>Gallery</a>
-      <li><a>Plant a Tree</a></li>
+        <a href="" class="">
+            About
+        </a>
+    </li>
+      <li>
+        <a href="" class="">
+            Gallery
+        </a>
+        </li>
+      <li>
+        <a href="" class="">
+            Plant a Tree
+        </a>
+    </li>
     </ul>
   </div>
   <div class="navbar-end">
@@ -96,15 +107,60 @@ generations.
     </section>
     <!-- banner section ends -->
 
-    <main id="categorieSec">
+    <main class="max-w-[1650px] mx-auto 
+    lg:px-10 2xl:px-0 flex flex-col items-center gap-2 mt-15">
         <!-- Categories section -->
+         
          <h2 class="text-center text-gray-900 font-sans font-bold text-3xl pt-7">
             Choose Your Trees
          </h2>
+         <!-- loading spinner -->
+        <span id="spinner" class="loading loading-dots loading-xl hidden">
 
-         <div id="categoryClick">
+        </span>
+        <!-- categories list -->
+        <div class="grid grid-cols-5 w-full 2xl:gap-4 lg:gap-2">
+            <div>
+            <h1 class="font-bold text-xl mb-2">
+                Categories
+            </h1>
+            <div id="category-container"
+            class="md:col-span-1 col-span-5 p-2 flex flex-col">
+            
+            </div>
+            </div>
 
-         </div>
+<!-- plant cards -->
+ <div id="card-container"
+ class="md:col-span-3 col-span-5 p-2 grid grid-cols-2 
+ lg:grid-cols-3 gap-2">
+ </div>
+
+ <div class="md:col-span-1 col-span-5 p-4 bg-white rounded-xl md:flex flex-col gap-3">
+<h1 class="font-bold text-xl">
+    Your Cart
+</h1 id="cart-display"
+class="flex flex-col gap-2">
+
+<div>
+    <hr>
+    <div id="total"
+    class="flex justify-between items-center">
+    <p>Total:</p>
+    <p>0 Tk.</p>
+
+    </div>
+
+</div>
+ </div>
+
+
+    
+    
+
+         
+
+        
     </main>
 
     <!-- Campaign section starts -->
@@ -199,10 +255,15 @@ Green Earth is a global tree plantation initiative dedicated to fighting <br> cl
   
   <input type="text" class="input" placeholder="Your Email Address" />
 
-  <input 
-  type="text" 
-  class="input text-black focus:ring-2 outline-none " 
-  placeholder="Number of Trees" />
+  
+  
+  <select class="input">
+    <option value="Number of Trees"> Number of Trees </option>
+  <option value="1 Tree - $5"> 1 Tree - $5 </option>
+  <option value="5 Trees - $25"> 5 Trees - $25 </option>
+  <option value="10 Trees - $50"> 10 Trees - $50 </option>
+  </select>
+  
   
 
 
@@ -229,9 +290,7 @@ Green Earth is a global tree plantation initiative dedicated to fighting <br> cl
 </footer>
 <!-- Footer ends -->
 
-
-     
-   
+<dialog id="modal" class="modal"></dialog>
   <script src="./index.js"></script>  
 </body>
 </html>
