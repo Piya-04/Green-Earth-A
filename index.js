@@ -1,16 +1,18 @@
 
-const spinner = document.getElementById("spinner");
 
-function showSpinner() {
-  spinner.classList.remove("hidden");
+
+//spinner
+
+const manageSpinner = (status) => {
+if (status == true) {
+  document.getElementById("spinner").classList.remove("hidden");
+  document.getElementById("plant-container").classList.add("hidden");
 }
-
-
-function hideSpinner() {
-  spinner.classList.add("hidden");
+else {
+  document.getElementById("plant-container").classList.remove("hidden");
+  document.getElementById("spinner").classList.add("hidden");
 }
-
-
+};
 
 
 
@@ -30,9 +32,11 @@ fetch(url)
 };
 
 const displayCategoryName= (categories)=>{
-const cardContainer=document.getElementById("card-container");
+const cardContainer=document.getElementById("plant-container");
 cardContainer.innerHTML= "";
-console.log(categories);
+categories.forEach(category => {
+console.log(category);
+})
 };
 
 const displayCategory=(categories) =>{
@@ -53,4 +57,3 @@ categoryContainer.append(btnDiv);
 }
 }
 loadCategory();
-    

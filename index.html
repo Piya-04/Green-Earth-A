@@ -131,7 +131,7 @@ generations.
             </div>
 
 <!-- plant cards -->
- <div id="card-container"
+ <div id="plant-container"
  class="md:col-span-3 col-span-5 p-2 grid grid-cols-2 
  lg:grid-cols-3 gap-2">
  </div>
@@ -290,7 +290,21 @@ Green Earth is a global tree plantation initiative dedicated to fighting <br> cl
 </footer>
 <!-- Footer ends -->
 
-<dialog id="modal" class="modal"></dialog>
+<!-- Modal starts -->
+ <dialog id="plant-modal" class="modal modal-bottom sm:modal-middle">
+      <div class="modal-box">
+        <div id="details-container" class="space-y-5"></div>
+        <div class="modal-action">
+          <form method="dialog">
+            <!-- if there is a button in form, it will close the modal -->
+            <button class="btn">Close</button>
+          </form>
+        </div>
+      </div>
+    </dialog>
+    <!-- Modal ends -->
+
+    <!-- JavaScript -->
   <script src="./index.js"></script>  
 </body>
 </html>
